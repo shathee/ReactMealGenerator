@@ -18,6 +18,9 @@ class MainContainer extends Component  {
           <h3>Meal Generator</h3>
           <nav>
             <button className={classes.NavMenuBtn} >
+                <Link to="/"> Home</Link>
+            </button>
+            <button className={classes.NavMenuBtn} >
                 <Link to="/GenerateRandomContainer"> Generate Random Meal</Link>
             </button>
             <button className={classes.NavMenuBtn}>
@@ -38,7 +41,9 @@ class MainContainer extends Component  {
                 <Route path="/CustomizationContainer">
                     <CustomizationContainer />
                 </Route>
-            
+                <Route path="/">
+                    <p>Home</p>
+                </Route>
             </Switch>
           </div>
           </Router>

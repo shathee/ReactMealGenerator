@@ -3,7 +3,7 @@ import { Component } from 'react';
 
 class CustomizationContainer extends Component {
     render(){
-        return 'choose friom available';
+        return 'Customize friom available';
     }
 }
 
