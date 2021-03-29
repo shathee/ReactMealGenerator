@@ -5,7 +5,9 @@ import {
     Route,
     Link
   } from "react-router-dom";
-import AvailableContainer from './SubContainers/AvailableContainer';
+import ChooseAvailableContainer from './SubContainers/AvailableContainer';
+import CustomizationContainer from './SubContainers/CustomizationContainer';
+import GenerateRandomContainer from './SubContainers/GenerateRandomContainer';
 import classes from './MainContainer.module.css';
 
 class MainContainer extends Component  {
@@ -19,17 +21,23 @@ class MainContainer extends Component  {
                 <Link to="/GenerateRandomContainer"> Generate Random Meal</Link>
             </button>
             <button className={classes.NavMenuBtn}>
-            <Link to="/ChooseAvailableContainer"> Choose from Availables</Link>
+                <Link to="/ChooseAvailableContainer"> Choose from Availables</Link>
             </button>
             <button className={classes.NavMenuBtn} >
-            <Link to="/CustomizationContainer"> Customize your meal</Link>
+                <Link to="/CustomizationContainer"> Customize your meal</Link>
             </button>
           </nav>
           <div className={classes.Content}>
             <Switch>
-            <Route path="/ChooseAvailableContainer">
-                <AvailableContainer />
-            </Route>
+                <Route path="/ChooseAvailableContainer">
+                    <ChooseAvailableContainer />
+                </Route>
+                <Route path="/GenerateRandomContainer">
+                    <GenerateRandomContainer />
+                </Route>
+                <Route path="/CustomizationContainer">
+                    <CustomizationContainer />
+                </Route>
             
             </Switch>
           </div>

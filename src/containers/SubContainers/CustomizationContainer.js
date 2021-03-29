@@ -1,10 +1,10 @@
 import { Component } from 'react';
 
 
-class ChooseAvailableContainer extends Component {
+class CustomizationContainer extends Component {
     render(){
         return 'choose friom available';
     }
 }
 
-export default ChooseAvailableContainer;
+export default CustomizationContainer;
