@@ -1,9 +1,37 @@
 import { Component } from 'react';
 
+import Meals from '../../components/Meals';
 
 class GenerateRandomContainer extends Component {
-    render(){
-        return 'GenerateRandomContainer friom available';
+
+    state = {
+        mealId: null,
+        mealName: null,
+        mealArea: null,
+        mealCategory: null,
+    }
+
+    componentDidMount (){
+        console.log('mounted');
+        fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+        .then(response => response.json())
+        .then(data => {
+            this.setState({
+                mealId: data['meals'][0].idMeal,
+                mealName: data['meals'][0].strMeal,
+                mealArea: data['meals'][0].strArea,
+                mealCategory: data['meals'][0].strCategory
+              });
+            //   console.log(this.state);
+            } 
+        );
+         
+    }
+    
+    render() {
+        return (
+            <Meals data={this.state} />
+        );
     }
 }
 

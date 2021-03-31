@@ -2,12 +2,13 @@ import React, {Component} from 'react';
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
   } from "react-router-dom";
 import ChooseAvailableContainer from './SubContainers/AvailableContainer';
 import CustomizationContainer from './SubContainers/CustomizationContainer';
 import GenerateRandomContainer from './SubContainers/GenerateRandomContainer';
+import NavComponent from '../components/NavComponent.js';
+
 import classes from './MainContainer.module.css';
 
 class MainContainer extends Component  {
@@ -16,34 +17,13 @@ class MainContainer extends Component  {
         <div className={classes.MainContainer}>
           <Router>
           <h3>Meal Generator</h3>
-          <nav>
-            <button className={classes.NavMenuBtn} >
-                <Link to="/"> Home</Link>
-            </button>
-            <button className={classes.NavMenuBtn} >
-                <Link to="/GenerateRandomContainer"> Generate Random Meal</Link>
-            </button>
-            <button className={classes.NavMenuBtn}>
-                <Link to="/ChooseAvailableContainer"> Choose from Availables</Link>
-            </button>
-            <button className={classes.NavMenuBtn} >
-                <Link to="/CustomizationContainer"> Customize your meal</Link>
-            </button>
-          </nav>
+          <NavComponent />
           <div className={classes.Content}>
             <Switch>
-                <Route path="/ChooseAvailableContainer">
-                    <ChooseAvailableContainer />
-                </Route>
-                <Route path="/GenerateRandomContainer">
-                    <GenerateRandomContainer />
-                </Route>
-                <Route path="/CustomizationContainer">
-                    <CustomizationContainer />
-                </Route>
-                <Route path="/">
-                    <p>Home</p>
-                </Route>
+                <Route path="/ChooseAvailableContainer" component={ChooseAvailableContainer} />
+                <Route path="/GenerateRandomContainer" component={GenerateRandomContainer} />
+                <Route path="/CustomizationContainer" component={CustomizationContainer} />
+                <Route path="/" component={GenerateRandomContainer} />
             </Switch>
           </div>
           </Router>

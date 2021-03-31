@@ -1,0 +1,48 @@
+
+nav {
+    display:flex;
+    flex-flow: row;
+    padding: 5px;
+    margin:auto;
+    align-items: center;
+    justify-content: center;
+}
+.NavMenuBtn{
+    background-color: #0D1F22;
+    width: 20%;
+    cursor: pointer;
+    margin:5px;
+    padding:15px 5px;
+    border: 1px solid yellow;
+}
+
+.NavMenuBtn:hover{
+    background-color: #2E2836;
+    border: 1px solid #FEFEFE;
+}
+
+.NavMenuBtn{
+    padding: 10px 10px;
+    text-decoration: none;
+    color: aquamarine;
+    text-align: center;
+}
+
+
+@media (max-width: 450px) {
+    nav {
+        display:flex;
+        flex-flow: column;
+        padding: 2px;
+        margin:auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .NavMenuBtn{
+        width: 80%;
+        height: 30px;
+        margin:2px;
+    }
+    
+    
+}
