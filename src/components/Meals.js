@@ -1,10 +1,11 @@
 
-import classes from './Meals.modules.css';
+import Meal from './Meal';
+import classes from './Meals.module.css';
 
 
 const Meals = (props) => (
     <div className={classes.mealsDiv}>
-        <h2>{props.data.mealName}</h2>
+        <Meal {...props} />
     </div>
 )
 
