@@ -11,18 +11,19 @@ const Meal = (props) => {
             }
     }
     let ings = Object.keys(ingObj).map(function(key) {
-        return <option value={key}>{key} : {ingObj[key]}</option>
+        return <li key={key}> <strong>{key}</strong> : {ingObj[key]}</li>
     });
     
     return (
     <div className={classes.mealDiv}>
         <div className={classes.left}>
-            <h3 className={classes.mealTitle}>{props.data.strMeal}</h3>
+            
             <div className={classes.row}>
                 <img src= {props.data.strMealThumb} alt={props.data.strMealThumb} />
-                <p>
+                <div className={classes.ingredients}>
+                <h3 className={classes.mealTitle}>{props.data.strMeal}</h3>
                     {ings}
-                </p>
+                </div>
             </div>
         </div>
         <div className={classes.right}>

@@ -30,16 +30,21 @@
 }
 .left img {
     padding-top:10px;
-    width: 40%;
-    height: 40%;
+    width: 50%;
+    /* height: 40%; */
     object-fit: cover;
 }
-.left .row p {
-    padding: 0px 0px px 5px;
+.ingredients {
+    padding-left: 20px;
 }
+.ingredients li{
+    list-style: none;
+}
+
 .mealTitle{
     padding: 10px;
 }
-.mealTitle h3 {
+.ingredients h3 {
     color:tomato;
+    text-align: left;
 }

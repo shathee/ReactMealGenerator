@@ -7,6 +7,7 @@ import {
 import ChooseAvailableContainer from './SubContainers/AvailableContainer';
 import CustomizationContainer from './SubContainers/CustomizationContainer';
 import GenerateRandomContainer from './SubContainers/GenerateRandomContainer';
+import HomeContainer from './SubContainers/HomeContainer';
 import NavComponent from '../components/NavComponent.js';
 
 import classes from './MainContainer.module.css';
@@ -23,7 +24,7 @@ class MainContainer extends Component  {
                 <Route path="/ChooseAvailableContainer" component={ChooseAvailableContainer} />
                 <Route path="/GenerateRandomContainer" component={GenerateRandomContainer} />
                 <Route path="/CustomizationContainer" component={CustomizationContainer} />
-                <Route path="/" component={GenerateRandomContainer} />
+                <Route path="/" component={HomeContainer} />
             </Switch>
           </div>
           </Router>
